@@ -8,7 +8,7 @@
         }
     ],
     "require": {
-        "jamvietnam/ci-scripts": "*"
+        "jamvietnam/ci-scripts": "dev-master"
     },
     "bin": [
         "scripts/init-new-project"
