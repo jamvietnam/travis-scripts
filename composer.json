@@ -7,10 +7,11 @@
             "url": "git@github.com:jamvietnam/ci-scripts.git"
         }
     ],
-    "require-dev": {
+    "require": {
         "jamvietnam/ci-scripts": "dev-master"
     },
     "bin": [
         "scripts/init-new-project"
-    ]
+    ],
+    "minimum-stability": "dev"
 }
