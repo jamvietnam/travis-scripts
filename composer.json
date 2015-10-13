@@ -7,7 +7,7 @@
             "url": "git@github.com:jamvietnam/ci-scripts.git"
         }
     ],
-    "require": {
+    "require-dev": {
         "jamvietnam/ci-scripts": "dev-master"
     },
     "bin": [
