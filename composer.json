@@ -1,8 +1,14 @@
 {
-    "name": "pantheon-systems/travis-scripts",
+    "name": "jamvietnam/travis-scripts",
     "description": "Use Travis to build a Drupal site with Composer, test with Behat, and then deploy to Pantheon.",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:jamvietnam/ci-scripts.git"
+        }
+    ],
     "require": {
-        "pantheon-systems/ci-scripts": "*"
+        "jamvietnam/ci-scripts": "*"
     },
     "bin": [
         "scripts/init-new-project"

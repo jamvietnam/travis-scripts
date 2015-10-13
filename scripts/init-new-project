@@ -6,7 +6,7 @@
 #   ./bin/init-new-project
 #
 # We do -not- expect this script to be called from the 'scripts' directory
-# of the pantheon-systems/travis-scripts project.  Rather, it is our
+# of the jamvietnam/travis-scripts project.  Rather, it is our
 # expectation that the user has 'require'd travis-scripts from their
 # project's composer.json file.  Thus, `composer install` will have copied
 # this script into the project's 'bin' directory.  We will test this
@@ -24,19 +24,19 @@ PROJECT_BASE_DIR="`cd -P -- "$SELF_DIRNAME/.." && pwd -P`"
 # The project name is the name of the directory that contains the project
 PROJECT_NAME="$(basename "$PROJECT_BASE_DIR")"
 
-# We expect that pantheon-systems/travis-scripts is in the project's
+# We expect that jamvietnam/travis-scripts is in the project's
 # composer.json file, and that therefore we should be able to find
-# the 'examples' directory in VENDOR/pantheon-systems/travis-scripts/examples.
+# the 'examples' directory in VENDOR/jamvietnam/travis-scripts/examples.
 # The 'vendor' directory should be in drupal/sites/all/vendor, but
 # we will allow that it might be in the root directory of the project,
-# e.g. if the user added pantheon-systems/travis-scripts to an existing
+# e.g. if the user added jamvietnam/travis-scripts to an existing
 # composer.json file manually, and still wishes to run this init script.
 VENDOR_DIR="$PROJECT_BASE_DIR/drupal/sites/all/vendor"
 if [ ! -d "$VENDOR_DIR" ]
 then
   VENDOR_DIR="$PROJECT_BASE_DIR/vendor"
 fi
-TRAVIS_SCRIPTS_DIR="$VENDOR_DIR/pantheon-systems/travis-scripts"
+TRAVIS_SCRIPTS_DIR="$VENDOR_DIR/jamvietnam/travis-scripts"
 EXAMPLES_DIR="$TRAVIS_SCRIPTS_DIR/examples"
 
 # Test to see if this script was called correctly
@@ -79,7 +79,7 @@ then
   git init
 fi
 git add .
-git commit -m "Project '$PROJECT_NAME' created via 'init-new-project' script from https://github.com/pantheon-systems/travis-scripts."
+git commit -m "Project '$PROJECT_NAME' created via 'init-new-project' script from https://github.com/jamvietnam/travis-scripts."
 echo
 echo "Project initialization completed.  Please see the local README.md file for next steps."
 
