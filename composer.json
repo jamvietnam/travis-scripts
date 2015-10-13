@@ -12,5 +12,6 @@
     },
     "bin": [
         "scripts/init-new-project"
-    ]
+    ],
+    "minimum-stability": "dev"
 }
